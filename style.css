@@ -1,0 +1,153 @@
+html {
+    background-color: rgb(236, 220, 201);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    display: flex;
+    justify-content:center;
+}
+#all{
+    width:970px;
+
+}
+a {
+    text-decoration: none;
+}
+
+#head {
+    height:170px;   
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    display:flex;
+
+}
+.right{
+    display:flex;
+
+}
+.listaleft, .listaright{
+    /* ver nota 1 */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.left li, .right li {
+    list-style: none;
+
+    text-align: center;
+}
+#logo {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#hat{
+    height: 100%;
+    background-image: url("images/chefs-hat.png");
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+#title {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* CONTENIDO */
+#main{
+    background-image: url('images/dishes.jpg');
+
+    background-repeat: no-repeat;
+    background-position: center;    
+    height:400px;
+}
+#input{
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    margin:20px;
+    padding:20px;
+
+}
+button, #email {
+    margin-top: 20px;
+    margin-bottom:20px;
+
+}
+#platos{
+    display:flex;
+    justify-content: space-between;
+
+}
+.box p{
+    color:rgb(255, 153, 0);
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+#pizza{
+    background-image: url('images/pizza.jpg');
+}
+#pasta{
+    background-image: url('images/pasta.jpg');
+}
+#diet{
+    background-image: url('images/diet.jpg'); 
+}
+.box {
+
+    background-repeat: no-repeat;
+    background-position: center;
+    height:300px;
+    width: 300px;
+}
+
+/* FOOTER */
+
+
+#cutlery{
+    background-image: url('images/cutlery.png') ;
+    height:80px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ul2 {
+    display:flex;
+    justify-content: space-evenly;
+    padding-bottom:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nota 1
+    en el ul, los items (li) estaban unos debajo del otro (porque asi son las listas)
+    y ademas alineados a la izquierda. Yo quiero alinear centrado. Para usar flexbos, el primer 
+    paso para cualquier cosa es identificar al padre como display:flex. El padre de los items li
+    es el ul. Entonces coloco display flex al ul para poder centrar despues. PERO al hacerle esto
+    al padre, sus hijos se van a alinear uno al lado del otro y no uno bajo el otro. Si quiero
+    mantenerlos uno bajo el otro tengo que cambiar ese default, y eso lo hago con flex-direction:
+    column. Luego de haber cambiado el default puedo centrar con align content center.. (align porque
+    le cambie la alineacion original)
+
